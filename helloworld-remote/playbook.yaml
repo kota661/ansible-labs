@@ -8,9 +8,9 @@
 
     - name: Create Contents
       copy:
-        src: index.html
-        dest: /usr/share/nginx/html/index.html
-        mode: preserve
+        src: ./html
+        dest: /usr/share/nginx/
+        mode: u=rw,g=r,o=r
 
     - name: Start Nginx service
       service:

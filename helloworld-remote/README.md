@@ -6,6 +6,14 @@ CentOSやRHELなどRedhat系のサーバーを準備する
 * 到達可能なIPアドレス
 * ssh key file
 
+
+
+## 今回のゴール
+
+* 用意したサーバーにNginxを構築してhelloworldを表示させる
+
+
+
 ## Ansibleの実行
 
 まずはじめにPlaybookがあるフォルダに移動します
@@ -30,7 +38,7 @@ inventoryファイルを開きサーバーのIPアドレスと、Private Keyの�
 [web]
 127.0.0.1   <<< こちらのIP
 
-[web:vars]
+[wewb:vars]
 ansible_port=22
 ansible_user=root
 ansible_ssh_private_key_file=~/.ssh/xxxxxxxx <<< こちらのSSH Key
